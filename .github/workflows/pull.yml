@@ -12,6 +12,4 @@ jobs:
     - name: Run commands on EC2
       run: |
         mkdir ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rma
-        chmod 600 ~/.ssh/id_rma
-        ssh -o StrictHostKeyChecking=no ec2-user@13.233.227.88 pwd
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" 
