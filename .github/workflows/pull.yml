@@ -14,4 +14,4 @@ jobs:
         mkdir ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh -o StrictHostKeyChecking=no ec2-user@13.233.227.88 pwd
+        ssh -o StrictHostKeyChecking=no ec2-user@13.233.227.88 sudo su
