@@ -23,4 +23,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: sherineseelan/test:god
+        tags: sherineseelan/test:isit
