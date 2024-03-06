@@ -11,6 +11,7 @@ jobs:
       run: sudo apt-get install -y openssh-client
     - name: Run commands on EC2
       run: |
-        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ec2-user@13.233.227.88 << EOF
-        pwd
-        EOF
+        mkdir ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh -o StrictHostKeyChecking=no ec2-user@13.233.227.88 pwd
