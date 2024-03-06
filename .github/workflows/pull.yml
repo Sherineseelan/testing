@@ -1,7 +1,7 @@
 name: EC2 command pull
 on:
   workflow_run:
-    workflows: ["main.yml"]
+    workflows: ["CI/CD Pipeline test"]
     types: 
       - completed
 jobs:
