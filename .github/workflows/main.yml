@@ -23,4 +23,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: sherineseelan/test:new
+        tags: sherineseelan/test:god
