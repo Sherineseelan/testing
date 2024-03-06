@@ -23,5 +23,5 @@ jobs:
         ssh -o StrictHostKeyChecking=no ec2-user@13.233.227.88 << EOF
         sudo su
         docker pull ${{ secrets.DOC_USERNAME }}/test:god
-        docker run -p 80:80 -d ${{ secrets.DOC_USERNAME }}/test:god
+        docker run -p 80:80 -d ${{ secrets.DOC_USERNAME }}/test:isit
         EOF
