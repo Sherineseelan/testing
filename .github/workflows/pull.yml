@@ -1,4 +1,4 @@
-name: EC2 command
+name: EC2 command pull
 on:
   push:
     branches:
