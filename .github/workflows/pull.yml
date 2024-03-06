@@ -1,8 +1,9 @@
 name: EC2 command pull
 on:
-  push:
-    branches:
-      - sherine
+  workflow_run:
+    workflows: ["sam"]
+    types: 
+      - completed
 jobs:
   build:
     runs-on: ubuntu-latest
