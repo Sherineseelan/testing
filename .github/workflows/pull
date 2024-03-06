@@ -1,0 +1,16 @@
+name: EC2 command
+on:
+  push:
+    branches:
+      - sherine
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install SSH
+      run: sudo apt-get install -y openssh-client
+    - name: Run commands on EC2
+      run: |
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} user@ec2-instance-ip << EOF
+        pwd
+        EOF
