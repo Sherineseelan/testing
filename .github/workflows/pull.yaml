@@ -11,6 +11,6 @@ jobs:
       run: sudo apt-get install -y openssh-client
     - name: Run commands on EC2
       run: |
-        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} user@ec2-instance-ip << EOF
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ec2-user@13.233.227.88 << EOF
         pwd
         EOF
