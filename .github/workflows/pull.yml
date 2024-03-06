@@ -1,7 +1,7 @@
 name: EC2 command pull
 on:
   workflow_run:
-    workflows: ["sam"]
+    workflows: ["main.yml"]
     types: 
       - completed
 jobs:
